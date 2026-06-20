@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maha Alsalhi — Cybersecurity Engineering Student</title>
-<meta name="description" content="Portfolio of Maha Alsalhi, Cybersecurity Engineering student at George Mason University.">
+<meta name="description" content="Portfolio of Maha Alsalhi, Cybersecurity Engineering student at George Mason University specializing in network security, Linux systems, and secure software development.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -165,21 +165,6 @@
   /* ============ SKILLS ============ */
   .skills-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;}
   .skill-block-title{font-family:var(--font-display);font-size:15px;letter-spacing:1px;color:var(--text);margin-bottom:24px;text-transform:uppercase;}
-  .skill-bar{margin-bottom:24px;}
-  .skill-bar-top{display:flex;justify-content:space-between;font-size:14.5px;margin-bottom:9px;}
-  .skill-bar-top span:first-child{color:var(--text);font-weight:600;}
-  .skill-bar-top span:last-child{color:var(--text-faint);font-variant-numeric:tabular-nums;}
-  .skill-track{height:9px;border-radius:6px;background:rgba(255,255,255,.06);overflow:hidden;}
-  .skill-fill{position:relative;height:100%;width:0;border-radius:6px;transition:width 1.5s cubic-bezier(.4,0,.2,1);overflow:hidden;}
-  .skill-bar:nth-child(6n+1) .skill-fill{background:linear-gradient(90deg,var(--indigo-soft),var(--pink));}
-  .skill-bar:nth-child(6n+2) .skill-fill{background:linear-gradient(90deg,var(--pink),var(--amber));}
-  .skill-bar:nth-child(6n+3) .skill-fill{background:linear-gradient(90deg,var(--cyan),var(--indigo-soft));}
-  .skill-bar:nth-child(6n+4) .skill-fill{background:linear-gradient(90deg,var(--amber),var(--cyan));}
-  .skill-bar:nth-child(6n+5) .skill-fill{background:linear-gradient(90deg,var(--indigo-soft),var(--cyan));}
-  .skill-bar:nth-child(6n+6) .skill-fill{background:linear-gradient(90deg,var(--pink),var(--cyan));}
-  .skill-fill--shimmer::after{content:'';position:absolute;top:0;left:-60%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent);animation:shimmerSweep 1.2s ease;}
-  @keyframes shimmerSweep{0%{left:-60%;}100%{left:120%;}}
-
   .chip-cloud{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:38px;}
   .chip{padding:9px 17px;border-radius:999px;border:1px solid var(--surface-border);background:var(--surface);font-size:13.5px;color:var(--text-dim);transition:transform .35s var(--ease),color .3s,border-color .3s,background .3s;cursor:default;}
   .chip:hover{transform:translateY(-6px);color:var(--text);border-color:var(--cyan);background:rgba(45,226,230,.08);}
@@ -230,6 +215,9 @@
   .award-item{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;border-radius:14px;background:var(--surface);border:1px solid var(--surface-border);font-size:14px;color:var(--text-dim);}
   .award-icon{flex-shrink:0;width:8px;height:8px;border-radius:50%;margin-top:6px;background:linear-gradient(135deg,var(--amber),var(--pink));}
   .award-item strong{color:var(--text);display:block;font-size:14.5px;margin-bottom:2px;}
+  .award-item--pending{opacity:.62;border-style:dashed;}
+  .award-icon--pending{background:none;border:1.5px dashed var(--text-faint);}
+  .pending-tag{display:inline-block;margin-left:8px;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:rgba(255,179,64,.15);border:1px solid rgba(255,179,64,.4);color:var(--amber);vertical-align:middle;}
 
   .lang-badges{display:flex;flex-direction:column;gap:14px;margin-top:26px;}
   .lang-badge{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 20px;border-radius:999px;border:1px solid var(--surface-border);background:var(--surface);transition:transform .35s var(--ease),border-color .3s;}
@@ -251,6 +239,7 @@
   .contact-icon svg{width:20px;height:20px;}
   .contact-label{font-size:12px;color:var(--text-faint);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;}
   .contact-value{font-size:15.5px;font-weight:600;color:var(--text);word-break:break-word;}
+  .contact-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px;}
 
   .avatar-pulse-wrap{position:relative;display:flex;align-items:center;justify-content:center;min-height:300px;}
   .ripple{position:absolute;width:160px;height:160px;border:2px solid var(--cyan);border-radius:50%;opacity:0;animation:ripple 3s ease-out infinite;}
@@ -264,6 +253,10 @@
   footer{padding:50px 24px 40px;text-align:center;border-top:1px solid var(--surface-border);}
   .footer-name{font-family:var(--font-display);font-weight:700;color:var(--text);margin-bottom:6px;}
   .footer-sub{font-size:13px;color:var(--text-faint);}
+  .footer-socials{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:24px;}
+  .footer-socials a{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid var(--surface-border);background:var(--surface);color:var(--text-dim);transition:transform .35s var(--ease),color .3s,border-color .3s,background .3s;}
+  .footer-socials a:hover{transform:translateY(-4px);color:var(--cyan);border-color:var(--cyan);background:rgba(45,226,230,.08);}
+  .footer-socials svg{width:18px;height:18px;}
 
   .back-to-top{position:fixed;right:26px;bottom:26px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--indigo-soft),var(--pink));display:flex;align-items:center;justify-content:center;color:#fff;z-index:500;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .35s ease,transform .35s ease,visibility .35s ease;cursor:pointer;box-shadow:0 12px 28px -10px rgba(255,61,138,.6);}
   .back-to-top.show{opacity:1;visibility:visible;transform:translateY(0);}
@@ -329,7 +322,7 @@
         <div class="availability-tag"><span class="availability-dot"></span> Open to Cybersecurity Internships</div>
         <h1 class="hero-name">Maha Alsalhi</h1>
         <p class="hero-title">Cybersecurity Engineering Student</p>
-        <p class="hero-blurb">Cybersecurity Engineering student at George Mason University, building hands-on skills in network traffic analysis, system security, and protocol fundamentals — one lab at a time.</p>
+        <p class="hero-blurb">Cybersecurity Engineering student at George Mason University, focused on network security, traffic analysis, and secure systems. Building practical, internship-ready skills through hands-on labs, security-focused projects, and a strong foundation in Linux, networking, and secure software development.</p>
         <div class="hero-cta">
           <a href="#projects" class="btn btn--primary">View My Work</a>
           <a href="#contact" class="btn btn--secondary">Get In Touch</a>
@@ -346,7 +339,7 @@
           <div class="card-role"><strong>Maha Alsalhi</strong>Cybersecurity Engineering Student</div>
           <div class="stats-row">
             <div class="stat-item"><div class="stat-value" style="font-size:17px;">Dean's List</div><div class="stat-label">Academic Honor</div></div>
-            <div class="stat-item"><div class="stat-value">3+</div><div class="stat-label">Certifications</div></div>
+            <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">Security Projects</div></div>
           </div>
         </div>
       </div>
@@ -388,36 +381,7 @@
 
       <div class="skills-layout">
         <div class="reveal-left">
-          <div class="skill-block-title">Technical Skills</div>
-
-          <div class="skill-bar">
-            <div class="skill-bar-top"><span>Cybersecurity Fundamentals</span><span>75%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-level="75"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-top"><span>Networking Basics</span><span>60%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-level="60"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-top"><span>Wireshark (Traffic Analysis)</span><span>55%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-level="55"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-top"><span>Linux (Basic Commands)</span><span>70%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-level="70"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-top"><span>Python (Intermediate)</span><span>60%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-level="60"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-top"><span>C (Intro Level)</span><span>38%</span></div>
-            <div class="skill-track"><div class="skill-fill" data-level="38"></div></div>
-          </div>
-        </div>
-
-        <div class="reveal-right">
-          <div class="skill-block-title">Technology Cloud</div>
+          <div class="skill-block-title">Core Technical Skills</div>
           <div class="chip-cloud">
             <span class="chip">Cybersecurity</span>
             <span class="chip">Networking</span>
@@ -429,7 +393,9 @@
             <span class="chip">Node.js</span>
             <span class="chip">System Security</span>
           </div>
+        </div>
 
+        <div class="reveal-right">
           <div class="skill-block-title">Soft Skills</div>
           <div class="chip-cloud">
             <span class="chip">Teamwork</span>
@@ -446,7 +412,7 @@
       <div class="section-head reveal">
         <div class="eyebrow">Journey</div>
         <h2 class="section-title">Experience</h2>
-        <p class="section-sub">Hands-on practice translating coursework into real security and networking skills.</p>
+        <p class="section-sub">Applying coursework to practical, security-focused work — from packet analysis to system hardening.</p>
       </div>
 
       <div class="timeline">
@@ -454,20 +420,21 @@
           <div class="timeline-dot"></div>
           <div class="exp-card">
             <div class="exp-top">
-              <div class="exp-title">Cybersecurity Student — Academic Labs &amp; Coursework</div>
+              <div class="exp-title">Cybersecurity Engineering Coursework &amp; Lab Experience</div>
               <div class="exp-dates">09/2024 – Present</div>
             </div>
             <div class="exp-meta">George Mason University · Fairfax, VA</div>
             <ul class="exp-list">
-              <li>Completed hands-on labs related to cybersecurity and networking</li>
-              <li>Analyzed basic network traffic using Wireshark</li>
-              <li>Learned fundamentals of network protocols and system security</li>
-              <li>Practiced problem-solving through technical assignments and labs</li>
+              <li>Completed hands-on cybersecurity and networking labs covering threat identification, system hardening, and secure configuration practices</li>
+              <li>Performed network traffic analysis using Wireshark to inspect protocols, trace packet behavior, and identify anomalous activity</li>
+              <li>Applied core principles of network protocols, system security, and access control through structured coursework and lab exercises</li>
+              <li>Strengthened analytical and troubleshooting skills by working through technical security challenges both independently and in team settings</li>
             </ul>
             <div class="badge-row">
               <span class="badge">Wireshark</span>
               <span class="badge">Network Protocols</span>
               <span class="badge">System Security</span>
+              <span class="badge">Linux</span>
               <span class="badge">Problem Solving</span>
             </div>
           </div>
@@ -480,17 +447,50 @@
       <div class="section-head reveal">
         <div class="eyebrow">Built &amp; Explored</div>
         <h2 class="section-title">Projects</h2>
-        <p class="section-sub">Coursework-driven projects connecting hardware concepts with engineering requirements.</p>
+        <p class="section-sub">Security-focused builds and labs spanning secure web development, network analysis, and systems work.</p>
       </div>
 
       <div class="projects-grid">
         <div class="project-card reveal">
+          <span class="project-emoji">🔐</span>
+          <h3 class="project-name">Secure Status Portal</h3>
+          <p class="project-desc">Built a secure JavaScript web application demonstrating safe DOM manipulation, input sanitization, event handling, JSON processing, async/await operations, and client-side security best practices.</p>
+          <div class="project-tags">
+            <span>JavaScript</span>
+            <span>Input Sanitization</span>
+            <span>Async/Await</span>
+            <span>Client-Side Security</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <span class="project-emoji">📡</span>
+          <h3 class="project-name">Network Traffic Analysis</h3>
+          <p class="project-desc">Analyzed network traffic using Wireshark to inspect protocols, identify packet behavior, and build a deeper understanding of real-world network communications.</p>
+          <div class="project-tags">
+            <span>Wireshark</span>
+            <span>Protocol Analysis</span>
+            <span>Packet Inspection</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <span class="project-emoji">🐧</span>
+          <h3 class="project-name">Linux Security Labs</h3>
+          <p class="project-desc">Completed hands-on Linux security exercises covering file permissions, process management, system administration, and core security fundamentals.</p>
+          <div class="project-tags">
+            <span>Linux</span>
+            <span>Permissions</span>
+            <span>System Administration</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
           <span class="project-emoji">🦶</span>
           <h3 class="project-name">Foot Sensor Engineering Project</h3>
-          <p class="project-desc">A sensor-based engineering project built as part of coursework — contributed to system design and functionality planning, and collaborated with a team to develop and present the final result.</p>
+          <p class="project-desc">Sensor-based engineering project focused on hardware integration, system design, testing, and cross-functional teamwork.</p>
           <div class="project-tags">
             <span>Hardware Integration</span>
-            <span>Sensors</span>
             <span>System Design</span>
             <span>Team Collaboration</span>
           </div>
@@ -502,8 +502,8 @@
     <section class="section" id="education">
       <div class="section-head reveal">
         <div class="eyebrow">Foundation</div>
-        <h2 class="section-title">Education &amp; Languages</h2>
-        <p class="section-sub">Academic background, recognitions, and language proficiency.</p>
+        <h2 class="section-title">Education &amp; Certifications</h2>
+        <p class="section-sub">Academic background, certifications, and language proficiency.</p>
       </div>
 
       <div class="edu-layout">
@@ -519,12 +519,12 @@
             </div>
           </div>
 
-          <div class="skill-block-title" style="margin-top:36px;">Awards &amp; Certifications</div>
+          <div class="skill-block-title" style="margin-top:36px;">Certifications</div>
           <div class="awards-list">
             <div class="award-item"><span class="award-icon"></span><div><strong>Google Cybersecurity Professional Certificate</strong>Foundational certification in cybersecurity practices</div></div>
-            <div class="award-item"><span class="award-icon"></span><div><strong>Dean's List — George Mason University</strong>Fall 2024 &amp; Spring 2025</div></div>
             <div class="award-item"><span class="award-icon"></span><div><strong>ReactJS for Beginners</strong>Certificate · 24 May 2026 · Code 10261592</div></div>
-            <div class="award-item"><span class="award-icon"></span><div><strong>Getting Started with NodeJS</strong>Certificate · 21 May 2026 · Code 10252205</div></div>
+            <div class="award-item"><span class="award-icon"></span><div><strong>Dean's List Honor Recognition</strong>George Mason University · Fall 2024 &amp; Spring 2025</div></div>
+            <div class="award-item award-item--pending"><span class="award-icon award-icon--pending"></span><div><strong>CompTIA Security+ <span class="pending-tag">Coming Soon</span></strong>In progress · Industry-recognized security certification</div></div>
           </div>
         </div>
 
@@ -559,7 +559,7 @@
       <div class="section-head reveal">
         <div class="eyebrow">Let's Connect</div>
         <h2 class="section-title">Get In Touch</h2>
-        <p class="section-sub">Open to cybersecurity internship opportunities — reach out any time.</p>
+        <p class="section-sub">Open to cybersecurity internships, student opportunities, and professional networking.</p>
       </div>
 
       <div class="contact-layout">
@@ -569,16 +569,18 @@
             <div><div class="contact-label">Email</div><div class="contact-value">malsalhi@gmu.edu</div></div>
           </div>
           <div class="contact-card">
-            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></div>
-            <div><div class="contact-label">Phone</div><div class="contact-value">(571) 639-8163</div></div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-7.2 7-12a7 7 0 0 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div>
-            <div><div class="contact-label">Location</div><div class="contact-value">Chantilly, VA</div></div>
-          </div>
-          <div class="contact-card">
             <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
             <div><div class="contact-label">Availability</div><div class="contact-value">Open to Internships</div></div>
+          </div>
+          <div class="contact-actions">
+            <a href="https://www.linkedin.com/in/maha-alsalhi-50700231b/" target="_blank" rel="noopener" class="btn btn--primary">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2.5 2.5 0 0 1 5 0V17M11 10v7"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/mahaalsalhi" target="_blank" rel="noopener" class="btn btn--secondary">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.1-.5 2V21"/></svg>
+              GitHub
+            </a>
           </div>
         </div>
 
@@ -595,6 +597,17 @@
   <footer>
     <div class="footer-name">Maha Alsalhi</div>
     <div class="footer-sub">Cybersecurity Engineering Student · George Mason University</div>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/maha-alsalhi-50700231b/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2.5 2.5 0 0 1 5 0V17M11 10v7"/></svg>
+      </a>
+      <a href="https://github.com/mahaalsalhi" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.1-.5 2V21"/></svg>
+      </a>
+      <a href="mailto:malsalhi@gmu.edu" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      </a>
+    </div>
   </footer>
 
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
@@ -735,21 +748,15 @@
     }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
     document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el){ revealIO.observe(el); });
 
-    /* ===== SKILL BAR FILL ON SCROLL ===== */
+    /* ===== EDU CARD REVEAL ON SCROLL ===== */
     var skillIO = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
         if (entry.isIntersecting){
-          var fill = entry.target.querySelector('.skill-fill');
-          if (fill){
-            var level = fill.getAttribute('data-level');
-            fill.style.width = level + '%';
-            setTimeout(function(){ fill.classList.add('skill-fill--shimmer'); }, 1300);
-          }
           skillIO.unobserve(entry.target);
         }
       });
     }, { threshold: 0.4 });
-    document.querySelectorAll('.skill-bar, .edu-card').forEach(function(el){ skillIO.observe(el); });
+    document.querySelectorAll('.edu-card').forEach(function(el){ skillIO.observe(el); });
 
     /* ===== ACTIVE NAV LINK ON SCROLL ===== */
     var sections = document.querySelectorAll('main section[id]');
